@@ -17,12 +17,15 @@ class Myapp extends StatefulWidget {
 }
 
 class _MyappState extends State<Myapp> {
+  String nomDeveloper = "Martin G. Villa A.";
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.indigoAccent,
         appBar: AppBar(
+          backgroundColor: Colors.indigo[700],
           title: Text("My Card"),
         ),
         body: Column(
@@ -31,7 +34,7 @@ class _MyappState extends State<Myapp> {
             CircleAvatar(
               radius: 100.0,
               backgroundColor: Colors.white24,
-              backgroundImage: AssetImage("assets/images/persona1.jpeg"),
+              backgroundImage: AssetImage("assets/images/MVA.jpg"),
               //backgroundImage: NetworkImage(
               //    "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=600"),
             ),
@@ -39,7 +42,7 @@ class _MyappState extends State<Myapp> {
               height: 12.0,
             ),
             Text(
-              "Fiorella de Fátima Guadalupe",
+              nomDeveloper,
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 25.0,
@@ -95,7 +98,7 @@ class _MyappState extends State<Myapp> {
                   Icons.email_outlined,
                   color: Colors.indigo,
                 ),
-                title: Text("correo@gmail.com"),
+                title: Text("mvilla714@gmail.com"),
                 subtitle: Text("Correo electrónico"),
                 trailing: Icon(
                   Icons.check_circle_outline_outlined,
@@ -127,6 +130,18 @@ class _MyappState extends State<Myapp> {
                   "assets/images/instagram.png",
                   height: 60,
                 ),
+              ],
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  "assets/images/qrAppCard.png",
+                  width: 90,
+                )
               ],
             )
           ],
